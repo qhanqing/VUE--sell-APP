@@ -27,20 +27,24 @@ const NEGATIVE = 1
 export default {
   name: 'ratingSelect',
   props: {
+    // 要展示的信息
     ratings: {
       type: Array,
       default () {
         return []
       }
     },
+    // 当前选中的标签
     selectType: {
       type: Number,
       default: 2
     },
+    // 是否只看有内容的评价
     onlyContent: {
       type: Boolean,
       default: false
     },
+    // 满意度
     desc: {
       type: Object,
       default () {

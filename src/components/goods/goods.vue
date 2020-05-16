@@ -162,6 +162,7 @@ export default {
     selectFoodClick (food) {
       this.selectedFoods = food
       // eslint-disable-next-line no-unused-expressions
+      // 每次进入商品详情都刷新组件
       this.$refs.food.show()
     }
   },

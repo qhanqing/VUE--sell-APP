@@ -2,7 +2,7 @@
   <div class="star" :style="starType">
     <div v-for="(item,index) in itemClassess" :key="index"
          class="star-item">
-      <img :src="item">
+      <img :src="item" :style="imgType">
     </div>
   </div>
 </template>
@@ -16,11 +16,21 @@ export default {
     },
     score: {
       type: Number
+    },
+    imgWidth: {
+      type: Number
     }
   },
   computed: {
     starType () {
       return 'width:' + this.size + 'px'
+    },
+    imgType () {
+      if (this.imgWidth) {
+        return 'width:' + this.imgWidth + 'px' + ';' + 'height:' + this.imgWidth + 'px'
+      } else {
+        return 'width: auto;height: auto;'
+      }
     },
     itemClassess () {
       let result = []

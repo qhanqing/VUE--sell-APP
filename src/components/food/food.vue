@@ -69,7 +69,7 @@
     </div>
   </div>
 </template>
-
+<!--商品详情-->
 <script>
 import BScroll from 'better-scroll'
 import cartControl from '../cartcontrol/cartButton'
